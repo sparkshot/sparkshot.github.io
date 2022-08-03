@@ -17,11 +17,12 @@ const About: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <div className={styles.grid}>
+        {/* <div className={styles.grid}>
           <Link href="https://nextjs.org/docs" className={styles.card}>
             <h2>HELLO this is about page &rarr;</h2>
           </Link>
-        </div>
+        </div> */}
+        <h2>HELLO this is about page &rarr;</h2>
       </main>
 
       <footer className={styles.footer}>

@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -36,10 +37,10 @@ const Home: NextPage = () => {
             <p>Learn about Next.js in an interactive course with quizzes!</p>
           </a>
 
-          <a href="/about" className={styles.card}>
+          <Link href="/about" className={styles.card}>
             <h2>MEH &rarr;</h2>
             <p>Testing the ABOUT route!</p>
-          </a>
+          </Link>
 
           <a
             href="https://github.com/vercel/next.js/tree/canary/examples"

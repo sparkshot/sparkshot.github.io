@@ -38,8 +38,7 @@ const Home: NextPage = () => {
           </a>
 
           <Link href="/about" className={styles.card}>
-            <h2>MEH &rarr;</h2>
-            <p>Testing the ABOUT route!</p>
+            <h2>MEH ABOUT &rarr;</h2>
           </Link>
 
           <a

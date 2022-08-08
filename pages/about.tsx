@@ -11,7 +11,7 @@ const About: NextPage = () => {
         <meta name="description" content="Sparkshot Media: Luxury " />
         <link
           rel="icon"
-          href={`${process.env.NEXT_PUBLIC_FAVICON}/icons8-sparkling-color-96.png`}
+          href={`${process.env.NEXT_PUBLIC_FAVICON}icons8-sparkling-color-96.png`}
         />
       </Head>
 

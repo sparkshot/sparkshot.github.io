@@ -1,19 +1,17 @@
 .container {
   padding: 0 2rem;
-  background-color: #222;
+  background-color: #000;
   padding: 2vw;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #222;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent 7px,
-    rgba(0, 0, 0, 0.8) 9px,
-    rgba(0, 0, 0, 0.8) 13px,
-    transparent 13px
-  );
+  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+  background: linear-gradient(-45deg, #000, #222, #002, #000);
+  background-size: 400% 400%;
+  animation: gradient 3s ease infinite;
+  animation-delay: 20050ms;
+  /* background-color: #000; */
 }
 
 .name {
@@ -47,6 +45,18 @@
     transparent 13px
   );
 } */
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 @-webkit-keyframes blink {
   20%,

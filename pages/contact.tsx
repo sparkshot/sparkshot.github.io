@@ -8,6 +8,10 @@ const Contact: NextPage = () => {
         If you're a hot girl, hit me up. I wear an upside down sweater when I'm
         chilling at my crib 😏
       </h1>
+      <p>
+        How will we meet you ask? Just yell really loud when you get to woodside
+        station. I'll come get yer booty.
+      </p>
     </div>
   );
 };

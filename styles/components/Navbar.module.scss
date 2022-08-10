@@ -1,0 +1,32 @@
+// Imports
+@import "../breakpoints", "../mixins";
+
+.navbar {
+  position: absolute;
+  background-color: transparent;
+  min-width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Sacramento;
+  &Logo {
+    color: sandybrown;
+    padding-left: 2rem;
+    padding-right: 1rem;
+  }
+
+  &List {
+    font-family: "Titan One", cursive;
+    color: white;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    &Item {
+      display: inline-block;
+      &:last-child {
+        padding-right: 2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.entireView {
+  background: #000;
+  // background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  animation: gradient 3s ease infinite;
+  background-size: 400% 400%;
+  min-width: 430px;
+}
+
+.main {
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.name {
+  font-size: 7vw;
+  font-family: "Sacramento", cursive;
+  // text-align: center;
+  animation: blink 4s infinite;
+  // -webkit-animation: blink 4s infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    // // Purple Neon
+    // text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+    //   0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+    // color: #fccaff;
+
+    // Orange Neon
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+      0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
+
+// @-webkit-keyframes blink {
+//   20%,
+//   24%,
+//   55% {
+//     color: #111;
+//     text-shadow: none;
+//   }
+
+//   0%,
+//   19%,
+//   21%,
+//   23%,
+//   25%,
+//   54%,
+//   56%,
+//   100% {
+//     // // Purple Neon
+//     // text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+//     //   0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+//     // color: #fccaff;
+
+//     // Orange Neon
+//     text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+//       0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+//     color: #fff6a9;
+//   }
+// }

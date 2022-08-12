@@ -5,14 +5,12 @@ const Contact: NextPage = () => {
   return (
     <div className={styles.container}>
       <h1>
-        If you{"'"}re a hot girl, hit me up. I wear an upside down sweater when
-        I{"'"}m chilling at my crib{" "}
+        Hit me up
         <span role="img" aria-label="face">
-          😏
+          📼 📷 📸 📹 🎥 📽
         </span>
         <p className={styles.textString}>
-          How will we meet you ask? Just yell really loud when you get to
-          woodside station. I{"'"}ll come get u{" "}
+          See you soon
           <span role="img" aria-label="sheep">
             🐑
           </span>

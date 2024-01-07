@@ -17,6 +17,10 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Titan+One&family=Sacramento&display=swap"
           rel="stylesheet"
         />
+        <link
+          rel="stylesheet"
+          href="https://raw.githubusercontent.com/miniMAC/magic/master/dist/magic.min.css"
+        />
       </Head>
       <body>
         <Main />

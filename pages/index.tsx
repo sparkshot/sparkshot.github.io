@@ -12,7 +12,8 @@ const Home: NextPage = () => {
       <div className={styles.entireView}>
         <div className={styles.main}>
           <h1 className={styles.name}>
-            <em>Sparkshot Media TEST</em>
+            <em>Sparkshot Media</em>
+            <div className="magictime puffIn">Photography Is What I Do</div>
           </h1>
         </div>
         <footer className={styles.footer}></footer>

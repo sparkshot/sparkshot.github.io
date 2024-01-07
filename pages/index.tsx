@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       <div className={styles.entireView}>
         <div className={styles.main}>
           <h1 className={styles.name}>
-            <em>Sparkshot Media</em>
+            <em>Sparkshot Media TEST</em>
           </h1>
         </div>
         <footer className={styles.footer}></footer>

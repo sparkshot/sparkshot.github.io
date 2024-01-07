@@ -13,9 +13,9 @@ const Home: NextPage = () => {
         <div className={styles.main}>
           <h1 className={styles.name}>
             <em>Sparkshot Media</em>
-            <div className="magictime puffIn">Photography Is What I Do</div>
           </h1>
         </div>
+        <div className="magictime puffIn">Photography Is What I Do</div>
         <footer className={styles.footer}></footer>
       </div>
     </>

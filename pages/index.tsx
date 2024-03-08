@@ -5,8 +5,8 @@ import styles from "../styles/Home.module.scss";
 import Section1 from "./Section1";
 import Section2 from "./Section2";
 import Section3 from "./Section3";
-import TextCard from "@components/textCard";
-import ImageCard from "@components/imageCard";
+import TextCard from "@components/text-card";
+import ImageCard from "@components/image-card";
 import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
 
 const Home: NextPage = () => {

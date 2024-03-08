@@ -1,7 +1,7 @@
 import styles from "../styles/components/ImageCard.module.scss";
 import Image from "next/image";
 import { useQuery } from "@utils/hooks/useQuery";
-import TextResp from "@components/textResp";
+import TextResp from "@components/text-resp";
 
 interface ImageCardProps {
   imageSrc: string | undefined;

@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import styles from "../styles/Section2.module.scss";
 import ImageCard from "@components/image-card";
-import TextResp from "@components/textResp";
+import TextResp from "@components/text-resp";
 
 const Section2: NextPage = () => {
   return (

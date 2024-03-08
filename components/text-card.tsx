@@ -1,5 +1,5 @@
 import styles from "@styles/components/TextCard.module.scss";
-import TextResp from "@components/textResp";
+import TextResp from "@components/text-resp";
 import Link from "next/link";
 
 interface TextCardProps {

@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import styles from "../styles/GalleryPage.module.scss";
-import Gallery from "@components/Gallery";
+import Gallery from "@components/gallery";
 
 const GalleryPage: NextPage = () => {
   return (

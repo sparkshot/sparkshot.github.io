@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import styles from "../styles/Section3.module.scss";
-import Gallery from "@components/Gallery";
+import Gallery from "@components/gallery";
 import Link from "next/link";
 import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
 

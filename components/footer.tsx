@@ -1,10 +1,9 @@
-import type { NextPage } from "next";
 import styles from "../styles/components/Footer.module.scss";
 
-const Footer: NextPage = (props) => {
+const Footer: React.FC<{}> = (props) => {
   return (
     <div className={styles.footer}>
-      <p>footer</p>
+      <p>© 2023 All Rights Reserved -- Spark Shot Media</p>
     </div>
   );
 };

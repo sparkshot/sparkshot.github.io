@@ -1,3 +1,5 @@
+@import "./_breakpoints.scss";
+
 // Slim devices
 @mixin xs {
   @media (min-width: #{$screen-xs-min}) {

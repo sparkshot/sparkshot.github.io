@@ -1,0 +1,83 @@
+@import "mixins", "colors";
+
+.container {
+  margin: 0 2rem 0 2rem;
+}
+.topBar {
+  border: solid black 1px;
+  margin: 5rem 4rem 2rem 4rem;
+}
+
+.headingRow {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 1rem 0;
+  flex-direction: column;
+  @include sm {
+    margin-bottom: 2rem;
+  }
+  @include md {
+    margin-bottom: 3rem;
+  }
+  @include lg {
+    flex-direction: row;
+    margin-bottom: 5rem;
+  }
+  @include xl {
+  }
+  @include xxl {
+  }
+}
+
+.heading {
+  min-width: 25vw;
+  margin: 0;
+  font-family: "Archivo Black", sans-serif;
+  display: flex;
+  align-items: baseline;
+  font-size: 2.8rem;
+
+  @include sm {
+    font-size: 5.5rem;
+  }
+  @include md {
+    font-size: 6.5rem;
+  }
+  @include lg {
+    font-size: 7rem;
+  }
+  @include xl {
+    font-size: 8rem;
+  }
+  @include xxl {
+    font-size: 9rem;
+  }
+}
+
+.headingLink {
+  font-family: "Archivo Black", sans-serif;
+  margin-bottom: 0;
+  align-self: end;
+  padding-right: 2rem;
+  font-size: 1.25rem;
+  @include sm {
+    font-size: 1.75rem;
+  }
+  @include md {
+    font-size: 2rem;
+  }
+  @include lg {
+    font-size: 2.25rem;
+    align-self: center;
+  }
+  @include xl {
+    font-size: 2.5rem;
+  }
+  @include xxl {
+    font-size: 3rem;
+  }
+}
+
+.gallery {
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,30 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin: 10px;
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo:nth-child(11n + 1) {
+  grid-area: span 2 / span 2;
+}
+.photo:nth-child(11n + 10) {
+  grid-area: 3/3 / span 2 / span 2;
+}
+.photo:nth-child(11n + 11) {
+  grid-column: span 4;
+  margin-top: 10px;
+}
+
+.photo:nth-child(11n + 1),
+.photo:nth-child(11n + 4),
+.photo:nth-child(11n + 5) {
+  margin-bottom: 10px;
+}

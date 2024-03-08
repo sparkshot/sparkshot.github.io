@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
-import styles from "../styles/Gallery.module.scss";
+import styles from "../styles/GalleryPage.module.scss";
+import Gallery from "@components/Gallery";
 
-const Gallery: NextPage = () => {
+const GalleryPage: NextPage = () => {
   return (
     <div className={styles.container}>
       <div>
@@ -10,8 +11,9 @@ const Gallery: NextPage = () => {
       <div>
         <h1> oming Soon</h1>
       </div>
+      <Gallery />
     </div>
   );
 };
 
-export default Gallery;
+export default GalleryPage;

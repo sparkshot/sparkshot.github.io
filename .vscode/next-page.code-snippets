@@ -1,0 +1,116 @@
+{
+  // Place your sparkshot workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+
+  "new Next Page": {
+    "prefix": "nextPage",
+    "body": [
+      "import type { NextPage } from 'next';",
+      /* These lines are set differently for each project */
+      //   "import styles from '../styles/${TM_FILENAME_BASE//${1:/upcase}$1/}.module.scss';", ${TM_FILENAME_BASE/(^\\w*)|(-)/${1:/pascalcase}${2:+ }/g}
+      "import styles from '../styles/${1:$TM_FILENAME_BASE}.module.scss';",
+      "",
+      /* POINT① */
+      "const ${1:$TM_FILENAME_BASE}: NextPage = () => {",
+      "  return (",
+      "     <div className={styles.container}>",
+      "          $1",
+      "     </div>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:$TM_FILENAME_BASE};"
+    ],
+    "scope": "typescriptreact"
+  },
+
+  "Block Typescript Component": {
+    "prefix": ["drewComp"],
+    "body": [
+      "import styles from '@styles/components/${TM_FILENAME_BASE/(.*)\\..+$/$1/}.module.scss'",
+      "",
+      "interface ${1:$TM_FILENAME_BASE}Props {",
+      "  exampleProp1: string | null | undefined;",
+      "  exampleProp2: string | null | undefined;",
+      "}",
+      "",
+      "const ${1:$TM_FILENAME_BASE}: React.FC<${1:$TM_FILENAME_BASE}Props> = (props: ${1:$TM_FILENAME_BASE}Props) => {",
+      "  return (",
+      "     <div className={styles.container}>",
+      "          $1",
+      "     </div>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:$TM_FILENAME_BASE};"
+    ],
+    "description": "Starting Block Typescript Component"
+  },
+  "Block Typescript Lazy-fied Component": {
+    "prefix": ["rf-lazy"],
+    "body": [
+      "import React from 'react'",
+      "",
+      "export const ${TM_FILENAME_BASE/\\..*$/$1/} = React.lazy(() =>",
+      " import(",
+      "   /* webpackChunkName: '${TM_FILENAME_BASE/\\..*$/$1/}' */",
+      "   './${TM_FILENAME_BASE/\\..*$/$1/}.component'",
+      " ).then((module) => ({ default: module.${TM_FILENAME_BASE/\\..*$/$1/} }))",
+      ")",
+      ""
+    ],
+    "description": "Starting Block Typescript Lazy-fied Component"
+  },
+  "Block Typescript Types": {
+    "prefix": ["rf-types"],
+    "body": [
+      "export interface ${TM_FILENAME_BASE/(.*)\\..+$/$1/}Props {",
+      " vm: ${TM_FILENAME_BASE/(.*)\\..+$/$1/}Vm",
+      "}",
+      "",
+      "export interface ${TM_FILENAME_BASE/(.*)\\..+$/$1/}Vm {",
+      "}"
+    ],
+    "description": "Starting Block Typescript Types"
+  },
+  "Block Sass": {
+    "prefix": ["rf-sass"],
+    "body": [".${TM_FILENAME_BASE/(.*)\\..+$/$1/} {", "}"],
+    "description": "Starting Block Sass"
+  },
+  "Block Data": {
+    "prefix": ["rf-data"],
+    "body": ["export const ${TM_FILENAME_BASE/(.*)\\..+$/$1/}Data = {}"],
+    "description": "Starting Block Data"
+  },
+  "Block Stories": {
+    "prefix": ["rf-stories"],
+    "body": [
+      "import React from 'react'",
+      "import { storiesOf } from '@storybook/react'",
+      "import { withContainer } from '@CMS/ui/js/storybook/decorators'",
+      "import { ${TM_FILENAME_BASE/(.*)\\..+$/$1/} } from './${TM_FILENAME_BASE/(.*)\\..+$/$1/}.component'",
+      "import { ${TM_FILENAME_BASE/(.*)\\..+$/$1/}Data } from './${TM_FILENAME_BASE/(.*)\\..+$/$1/}.data'",
+      "",
+      "storiesOf('Features/${TM_FILENAME_BASE/(.*)\\..+$/$1/}', module)",
+      " .addDecorator(withContainer)",
+      " .add('Default', () => <${TM_FILENAME_BASE/(.*)\\..+$/$1/} vm={${TM_FILENAME_BASE/(.*)\\..+$/$1/}Data} />)",
+      ""
+    ],
+    "description": "Starting Block Stories"
+  }
+}

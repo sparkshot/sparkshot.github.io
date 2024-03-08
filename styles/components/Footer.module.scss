@@ -1,8 +1,11 @@
+// Imports
+@import "../breakpoints", "../mixins";
+
 .footer {
-  //   position: absolute;
-  margin-top: -68px;
-  color: white;
-  font-family: "Sacramento";
   display: flex;
   justify-content: center;
+  min-width: $screen-xs-min;
+  width: 100%;
+  color: lightgray;
+  background-color: black;
 }

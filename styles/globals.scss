@@ -1,5 +1,5 @@
 // Imports - needs to be imported each time to individual .scss files
-@import "breakpoints", "mixins";
+@import "breakpoints", "mixins", "colors";
 
 html,
 body {
@@ -9,11 +9,12 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
   // Background
-  background: #057;
+  background-color: $color-1-beige;
   // background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   // animation: gradient 3s ease infinite;
   // background-size: 400% 400%;
-  min-width: 430px;
+  scroll-behavior: smooth;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 a {
@@ -36,6 +37,119 @@ a {
 }
 
 // Drew Custom
-h1 {
-  font-family: Georgia, "Times New Roman", Times, serif;
+/////////////////////
+
+#root {
+  max-width: $screen-xxl-min;
+  margin: 0 auto;
+}
+
+// Utility Classes
+/////////////////////
+
+.px-1 {
+  padding: 0 1rem;
+}
+.px-2 {
+  padding: 0 2rem;
+}
+.py-1 {
+  padding: 1rem 0;
+}
+.py-1 {
+  padding: 2rem 0;
+}
+
+.archivo-black-regular {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-serif display-regular {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.alata-regular {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// React Burger Menu
+/////////////////////
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 1.5rem;
+  top: 1.5rem;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  // custom edits
+  top: 0px;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+  // custom edits
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
 }

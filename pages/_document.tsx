@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 
 export default function Document() {
   return (
@@ -14,12 +14,12 @@ export default function Document() {
           href={`${process.env.NEXT_PUBLIC_FAVICON}icons8-camera-snap.gif`}
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Titan+One&family=Sacramento&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Titan+One&family=Sacramento&family=Alata&family=Archivo+Black&family=DM+Serif+Display&display=swap"
           rel="stylesheet"
         />
         <link
           rel="stylesheet"
-          href="https://raw.githubusercontent.com/miniMAC/magic/master/dist/magic.min.css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         />
       </Head>
       <body>

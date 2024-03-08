@@ -1,0 +1,36 @@
+@import "../breakpoints", "../mixins", "../colors";
+
+.textCard {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-2-black;
+  border-radius: 3rem;
+  color: $color-1-beige;
+  padding: 2rem;
+  justify-content: space-between;
+  font-family: "Archivo Black", sans-serif;
+  height: 100%;
+  @include sm {
+  }
+  @include md {
+    padding: 3rem;
+  }
+  @include lg {
+  }
+  @include xl {
+  }
+  @include xxl {
+  }
+}
+
+.bottomText {
+  font-size: 2.5rem;
+  text-align: left;
+  display: flex;
+}
+
+.icon {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-left: 0.5rem;
+}

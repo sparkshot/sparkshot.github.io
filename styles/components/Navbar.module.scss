@@ -2,31 +2,44 @@
 @import "../breakpoints", "../mixins";
 
 .navbar {
-  position: absolute;
   background-color: transparent;
-  min-width: 100vw;
+  min-width: $screen-xs-min;
+  max-width: $screen-xxl-min;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: Sacramento;
-  &Logo {
-    color: sandybrown;
-    padding-left: 2rem;
-    padding-right: 1rem;
-  }
+  font-family: "Titan One", cursive;
+  margin: auto;
+}
 
-  &List {
-    font-family: "Titan One", cursive;
-    color: white;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    gap: 1rem;
-    &Item {
-      display: inline-block;
-      &:last-child {
-        padding-right: 2rem;
-      }
-    }
-  }
+.navbarList {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.navbarListItem:last-child {
+  padding-right: 2rem;
+}
+
+.navbarLogo {
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+.bm-item .navbarListItem:hover {
+  font-size: 5rem;
+}
+
+.navbarListItemSidePane {
+  font-size: 3rem;
+}
+
+.navbarListItemSidePane:hover :global {
+  /* this ":global"  makes it work with css modules */
+  font-size: 5rem;
+  animation: pulse; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s;
+  animation-delay: 0s;
 }

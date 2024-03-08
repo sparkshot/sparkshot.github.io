@@ -1,23 +1,110 @@
-.entireView {
-  background: #000;
-  // background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  animation: gradient 3s ease infinite;
-  background-size: 400% 400%;
-  min-width: 430px;
+@import "mixins";
+
+.section0 {
+  height: 95vh;
 }
 
-.main {
-  padding: 0 2rem;
+.headline {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  @include xs {
+    font-size: 2.8rem;
+  }
+  @include sm {
+    font-size: 5.5rem;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  @include md {
+    font-size: 6.75rem;
+  }
+  @include lg {
+    font-size: 9rem;
+  }
+  @include xl {
+    font-size: 11rem;
+    margin-bottom: -1rem;
+  }
+  @include xxl {
+    font-size: 13rem;
+  }
+}
+
+.slogan {
+  text-align: center;
+  font-family: "DM Serif Display";
+  margin: 0px;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  @include sm {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  @include md {
+    font-size: 2.25rem;
+  }
+  @include lg {
+    font-size: 3.1rem;
+  }
+  @include xl {
+    font-size: 3.8rem;
+  }
+  @include xxl {
+    font-size: 4.5rem;
+  }
+}
+
+.boxes {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  gap: 1rem;
+  height: 65%;
+  flex-direction: column;
+  @include sm {
+    flex-direction: row;
+  }
+  @include md {
+  }
+  @include lg {
+  }
+  @include xl {
+  }
+  @include xxl {
+  }
 }
 
+.box1Container {
+  height: 100%;
+  @include sm {
+  }
+  @include md {
+    width: 60%;
+  }
+  @include lg {
+  }
+  @include xl {
+  }
+  @include xxl {
+  }
+}
+
+.section1 {
+  min-height: 95vh;
+}
+.section2 {
+  min-height: 95vh;
+}
+.section3 {
+  min-height: 95vh;
+}
+
+// Not in use anymore
 .name {
   font-size: 7vw;
   font-family: "Sacramento", cursive;
-  // text-align: center;
   animation: blink 4s infinite;
   // -webkit-animation: blink 4s infinite;
 }
@@ -61,31 +148,3 @@
     color: #fff6a9;
   }
 }
-
-// @-webkit-keyframes blink {
-//   20%,
-//   24%,
-//   55% {
-//     color: #111;
-//     text-shadow: none;
-//   }
-
-//   0%,
-//   19%,
-//   21%,
-//   23%,
-//   25%,
-//   54%,
-//   56%,
-//   100% {
-//     // // Purple Neon
-//     // text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
-//     //   0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
-//     // color: #fccaff;
-
-//     // Orange Neon
-//     text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
-//       0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-//     color: #fff6a9;
-//   }
-// }

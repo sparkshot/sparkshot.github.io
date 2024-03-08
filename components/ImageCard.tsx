@@ -28,7 +28,7 @@ const ImageCard: React.FC<ImageCardProps> = (props: ImageCardProps) => {
   };
   if (props.titleTextOnRight) {
     return (
-      <div style={imageCardStyles}>
+      <div style={imageCardStyles as React.CSSProperties}>
         {/* <div className={styles.container}>
          <Image
            src="/pic1.jpeg"
@@ -60,7 +60,7 @@ const ImageCard: React.FC<ImageCardProps> = (props: ImageCardProps) => {
     );
   } else {
     return (
-      <div style={imageCardStyles}>
+      <div style={imageCardStyles as React.CSSProperties}>
         {props.titleText && (
           <TextResp
             className={styles.text}

@@ -9,7 +9,7 @@ const Section2: NextPage = () => {
       <div id="featured-works" className={styles.container}>
         <TextResp
           className={styles.heading}
-          fontSizes={[2, 2.5, 3, 4.2, 5.5, 6.5, 8.5]}
+          fontSizes={[2, 2.5, 3, 4.2, 5.5, 6.5, 8]}
           htmlElementType="h1"
         >
           <b>FEATURED WORKS</b>

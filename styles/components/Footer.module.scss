@@ -1,11 +1,102 @@
 // Imports
-@import "../breakpoints", "../mixins";
+@import "../breakpoints", "../mixins", "../colors";
 
 .footer {
+  background-color: $color-2-black;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3rem 2rem 1.5rem;
+}
+
+.content {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (min-width: $screen-md-min) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  @media (min-width: $screen-md-min) {
+    align-items: flex-start;
+  }
+}
+
+.brandName {
+  font-family: "Titan One", cursive;
+  font-size: 1.25rem;
+  color: $color-3-white;
+}
+
+.tagline {
+  font-family: "Alata", sans-serif;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLink {
+  color: $color-3-white;
+  font-size: 1.25rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    color: rgba(225, 48, 108, 1);
+    transform: translateY(-2px);
+  }
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  @media (min-width: $screen-md-min) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.copyright {
+  font-family: "Alata", sans-serif;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.backToTop {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: $color-3-white;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  min-width: $screen-xs-min;
-  width: 100%;
-  color: lightgray;
-  background-color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $color-3-white;
+    color: $color-2-black;
+  }
 }

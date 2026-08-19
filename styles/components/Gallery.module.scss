@@ -1,30 +1,128 @@
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-  margin: 10px;
+// Imports
+@import "../colors", "../breakpoints";
+
+.gallerySection {
+  padding: 4rem 1rem;
+  background-color: $color-2-black;
+
+  @media (min-width: $screen-md-min) {
+    padding: 6rem 2rem;
+  }
 }
 
-.photo img {
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-family: "Titan One", cursive;
+  font-size: 2rem;
+  color: $color-3-white;
+  margin: 0 0 1rem;
+  letter-spacing: 0.05em;
+
+  @media (min-width: $screen-md-min) {
+    font-size: 3rem;
+  }
+}
+
+.sectionLine {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, $color-3-white, transparent);
+  margin: 0 auto;
+}
+
+.galleryContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+.photoCard {
+  position: relative;
+  border: 3px solid $color-3-white;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 6px;
+  background-color: $color-2-black;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (min-width: 576px) {
+    padding: 8px;
+  }
+
+  @media (min-width: 992px) {
+    border-width: 4px;
+    padding: 10px;
+  }
+
+  &:hover {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    z-index: 1;
+
+    .photoOverlay {
+      opacity: 1;
+    }
+
+    .photo {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.photo {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-.photo:nth-child(11n + 1) {
-  grid-area: span 2 / span 2;
-}
-.photo:nth-child(11n + 10) {
-  grid-area: 3/3 / span 2 / span 2;
-}
-.photo:nth-child(11n + 11) {
-  grid-column: span 4;
-  margin-top: 10px;
+.photoOverlay {
+  position: absolute;
+  inset: 6px;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+
+  @media (min-width: 992px) {
+    inset: 10px;
+  }
 }
 
-.photo:nth-child(11n + 1),
-.photo:nth-child(11n + 4),
-.photo:nth-child(11n + 5) {
-  margin-bottom: 10px;
+.viewIcon {
+  font-family: "Alata", sans-serif;
+  font-size: 0.875rem;
+  color: $color-3-white;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 1px solid $color-3-white;
+  padding: 0.5rem 1.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

@@ -1,45 +1,79 @@
 // Imports
-@import "../breakpoints", "../mixins";
+@import "../breakpoints", "../mixins", "../colors";
 
 .navbar {
-  background-color: transparent;
-  min-width: $screen-xs-min;
-  max-width: $screen-xxl-min;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: transparent;
+  transition: all 0.4s ease;
+
+  &.scrolled {
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 1rem 2rem;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+}
+
+.navbarTitle {
   font-family: "Titan One", cursive;
-  margin: auto;
-}
-
-.navbarList {
-  list-style: none;
+  font-size: 1.25rem;
+  color: $color-3-white;
+  text-decoration: none;
   display: flex;
-  justify-content: space-around;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @media (min-width: $screen-md-min) {
+    font-size: 1.5rem;
+  }
 }
 
-.navbarListItem:last-child {
-  padding-right: 2rem;
+.navbarIcon {
+  width: 28px;
+  height: 28px;
+
+  @media (max-width: 350px) {
+    display: none;
+  }
+
+  @media (min-width: $screen-md-min) {
+    width: 36px;
+    height: 36px;
+  }
 }
 
-.navbarLogo {
-  margin-left: 2rem;
-  margin-top: 1rem;
+.instagramLink {
+  color: $color-3-white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+
+  &:hover {
+    transform: scale(1.2) rotate(5deg);
+    filter: drop-shadow(0 0 8px rgba(225, 48, 108, 0.8));
+  }
 }
 
-.bm-item .navbarListItem:hover {
-  font-size: 5rem;
-}
+.instagramIcon {
+  display: block;
+  font-size: 1.5rem;
 
-.navbarListItemSidePane {
-  font-size: 3rem;
-}
-
-.navbarListItemSidePane:hover :global {
-  /* this ":global"  makes it work with css modules */
-  font-size: 5rem;
-  animation: pulse; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 1s;
-  animation-delay: 0s;
+  @media (min-width: $screen-md-min) {
+    font-size: 1.75rem;
+  }
 }

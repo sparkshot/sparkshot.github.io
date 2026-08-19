@@ -7,7 +7,7 @@ export default function Document() {
       <Head>
         <meta
           name="description"
-          content="Sparkshot Media: Luxury Real Estate Photography"
+          content="Sparkshot Media: Luxury Real Estate & Portait | Photography & Videography"
         />
         <link
           rel="icon"

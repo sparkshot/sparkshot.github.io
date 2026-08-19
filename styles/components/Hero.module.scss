@@ -1,0 +1,130 @@
+@import "../colors", "../breakpoints";
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  background: url("/hero_banner_pic.jpeg") center/cover no-repeat;
+  animation: kenBurns 20s ease-in-out infinite alternate;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-family: "Titan One", cursive;
+  font-size: 3rem;
+  color: $color-3-white;
+  margin: 0;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 4.5rem;
+  }
+
+  @media (min-width: $screen-md-min) {
+    font-size: 6rem;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    font-size: 7.5rem;
+  }
+}
+
+.subtitle {
+  font-family: "Alata", sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 1rem 0 0;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 1.25rem;
+  }
+
+  @media (min-width: $screen-md-min) {
+    font-size: 1.5rem;
+  }
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.scrollText {
+  font-family: "Alata", sans-serif;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes kenBurns {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes scrollPulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scaleY(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}

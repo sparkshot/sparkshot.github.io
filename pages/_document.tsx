@@ -14,7 +14,7 @@ export default function Document() {
           href={`${process.env.NEXT_PUBLIC_FAVICON}icons8-camera-snap.gif`}
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Titan+One&family=Sacramento&family=Alata&family=Archivo+Black&family=DM+Serif+Display&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Titan+One&family=Sacramento&family=Alata&family=Archivo+Black&family=DM+Serif+Display&display=swap"
           rel="stylesheet"
         />
         <link

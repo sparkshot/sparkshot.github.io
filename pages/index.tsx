@@ -3,7 +3,6 @@ import Hero from "@components/hero";
 import Gallery from "@components/gallery";
 import fs from "fs";
 import path from "path";
-import { imageSize } from "image-size";
 
 export interface Photo {
   src: string;
@@ -37,16 +36,11 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
       const numB = parseInt(b.match(/\d+/)![0]);
       return numA - numB;
     })
-    .map((file) => {
-      const filePath = path.join(publicDir, file);
-      const buffer = new Uint8Array(fs.readFileSync(filePath));
-      const dimensions = imageSize(buffer);
-      return {
-        src: `/${file}`,
-        width: dimensions.width!,
-        height: dimensions.height!,
-      };
-    });
+    .map((file) => ({
+      src: `/${file}`,
+      width: 1080,
+      height: 1350,
+    }));
 
   return { props: { photos } };
 };

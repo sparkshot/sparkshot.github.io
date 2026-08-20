@@ -4,27 +4,10 @@ import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { useInView } from "@utils/hooks/useInView";
-
-const photos = [
-  { src: "/portfolio-pic3.jpeg", width: 1080, height: 1360 },
-  { src: "/portfolio-pic4.jpeg", width: 1080, height: 1260 },
-  { src: "/portfolio-pic5.jpeg", width: 1000, height: 1300 },
-  { src: "/portfolio-pic6.jpeg", width: 1080, height: 1360 },
-  { src: "/portfolio-pic7.jpeg", width: 1080, height: 1620 },
-  { src: "/portfolio-pic8.jpeg", width: 1080, height: 1160 },
-  { src: "/portfolio-pic9.jpeg", width: 1080, height: 1360 },
-  { src: "/portfolio-pic10.jpeg", width: 1080, height: 1620 },
-  { src: "/portfolio-pic11.jpeg", width: 1080, height: 1360 },
-  { src: "/portfolio-pic12.jpeg", width: 1080, height: 1300 },
-  { src: "/portfolio-pic13.jpeg", width: 1080, height: 1620 },
-  { src: "/portfolio-pic14.jpeg", width: 1080, height: 1360 },
-  { src: "/portfolio-pic15.jpeg", width: 1080, height: 1360 },
-  { src: "/portfolio-pic16.jpeg", width: 980, height: 1220 },
-  { src: "/portfolio-pic17.jpeg", width: 1040, height: 1440 },
-];
+import type { Photo } from "@components/../pages/index";
 
 interface PhotoCardProps {
-  photo: (typeof photos)[0];
+  photo: Photo;
   index: number;
   onClick: () => void;
 }
@@ -54,10 +37,11 @@ const PhotoCard: React.FC<PhotoCardProps> = ({ photo, index, onClick }) => {
 };
 
 interface GalleryProps {
+  photos: Photo[];
   className?: string;
 }
 
-const Gallery: React.FC<GalleryProps> = ({ className }) => {
+const Gallery: React.FC<GalleryProps> = ({ photos, className }) => {
   const [lightboxIndex, setLightboxIndex] = useState(-1);
 
   const slides = photos.map((photo) => ({

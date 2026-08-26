@@ -23,7 +23,6 @@ const Home: NextPage<HomeProps> = ({ photos }) => {
   );
 };
 
-console.log("test")
 export default Home;
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
